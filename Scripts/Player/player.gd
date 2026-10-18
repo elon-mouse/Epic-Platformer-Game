@@ -60,6 +60,7 @@ func _physics_process(delta: float) -> void:
 		elif DASHED == true:
 			animated_sprite.play("dash")
 			print("played dash")
+			DASHED = false
 		else:
 			animated_sprite.play("walk")
 	else:
