@@ -10,6 +10,7 @@ var DASHED:bool = false
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var cooldown: Timer = $Timer
+@onready var animation_cooldown: Timer = $"Animation Cooldown"
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity
@@ -59,8 +60,10 @@ func _physics_process(delta: float) -> void:
 			animated_sprite.play("idle")
 		elif DASHED == true:
 			animated_sprite.play("dash")
-			print("played dash")
-			DASHED = false
+			print("played dash animation")
+			if animation_cooldown.is_stopped():
+				print("set to false")
+				DASHED = false
 		else:
 			animated_sprite.play("walk")
 	else:

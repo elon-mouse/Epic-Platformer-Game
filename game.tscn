@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://55qyweam33mm" path="res://player.tscn" id="1_80nbo"]
 [ext_resource type="PackedScene" uid="uid://euy456tnfsd4" path="res://killzone.tscn" id="1_e2o6t"]
-[ext_resource type="Texture2D" uid="uid://c5eirmf3cpu15" path="res://Assets/Map/tilemap_spritesheet_blocks.png" id="2_feb5d"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_x17sa"]
 
@@ -17,18 +16,9 @@ texture = SubResource("CompressedTexture2D_80nbo")
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:1/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7jktm"]
-texture = ExtResource("2_feb5d")
-0:0/next_alternative_id = 2
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-0:1/0 = 0
-
 [sub_resource type="TileSet" id="TileSet_x17sa"]
 physics_layer_0/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_fc0e3")
-sources/3 = SubResource("TileSetAtlasSource_7jktm")
 
 [node name="Game" type="Node2D" unique_id=1918467057]
 

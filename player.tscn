@@ -161,3 +161,7 @@ shape = SubResource("CapsuleShape2D_x17sa")
 
 [node name="Timer" type="Timer" parent="." unique_id=925321575]
 one_shot = true
+
+[node name="Animation Cooldown" type="Timer" parent="." unique_id=44638279]
+wait_time = 0.5
+one_shot = true
